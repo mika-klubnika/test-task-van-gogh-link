@@ -1,0 +1,156 @@
+:root {
+  --background: linear-gradient(88.17deg, #e3e8ff 2.56%, #eceef7 92.54%);
+  --nero: #232323;
+  --atlantis: #4e4e4e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: var(--nero);
+  background:var(--background);
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a[href]:hover {
+  opacity: 0.6;
+}
+
+a[href]:active {
+  opacity: 0.3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1220px;
+  min-width: 320px;
+
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+}
+
+.contacts__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.contacts__list {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 30px 125px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: 37px 1fr;
+  grid-template-rows: 37px 1fr;
+  gap: 7px 15px;
+}
+
+.contacts__img {
+  width: 37px;
+  height: 37px;
+}
+
+.contacts__subtitle {
+  margin: auto 0;
+  font-weight: 700;
+}
+
+.contacts__contact {
+  grid-column: 2/3;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--atlantis);
+}
+
+@media screen and (max-width: 1024px) {
+  .contacts__list {
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .contacts {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .contacts__title {
+    font-size: 22px;
+  }
+
+  .contacts__text {
+    margin-bottom: 30px;
+  }
+
+  .contacts__list {
+    grid-template-columns: none;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
